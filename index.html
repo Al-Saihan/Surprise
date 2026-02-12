@@ -16,14 +16,17 @@
 
         body {
             min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1);
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             font-family: 'Poppins', sans-serif;
             position: relative;
+            padding: 20px 0;
         }
 
         .heart-bg {
@@ -254,6 +257,82 @@
             color: #e91e63;
             min-height: 22px;
             font-weight: 600;
+        }
+
+        /* ===== Mobile responsiveness ===== */
+        @media (max-width: 600px) {
+            body {
+                justify-content: flex-start;
+                padding: 24px 0;
+            }
+
+            .container {
+                padding: 28px 20px;
+                border-radius: 22px;
+                width: 92%;
+            }
+
+            .big-heart {
+                font-size: 56px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                margin: 14px 0 8px;
+            }
+
+            .sub-text {
+                font-size: 0.92rem;
+                margin-bottom: 24px;
+                line-height: 1.6;
+            }
+
+            .sub-text br {
+                display: none;
+            }
+
+            .btn-yes,
+            .btn-no {
+                padding: 12px 32px;
+                font-size: 1rem;
+            }
+
+            .buttons {
+                gap: 16px;
+            }
+
+            .success-screen h1 {
+                font-size: 2.2rem;
+                padding: 0 16px;
+            }
+
+            .success-screen .big-heart-win {
+                font-size: 72px;
+            }
+
+            .success-screen p {
+                font-size: 1.05rem;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-height: 650px) {
+            body {
+                justify-content: flex-start;
+                padding: 16px 0;
+            }
+
+            .big-heart {
+                font-size: 48px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 20px 16px;
+            }
         }
     </style>
 </head>
