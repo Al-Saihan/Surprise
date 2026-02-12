@@ -157,11 +157,6 @@
             transform: scale(1.05);
         }
 
-        .btn-no.runaway {
-            position: fixed;
-            transition: none;
-        }
-
         .success-screen {
             display: none;
             flex-direction: column;
@@ -333,14 +328,6 @@
                 noCounter.textContent = "The No button gave up... just say Yes!";
                 return;
             }
-
-            noBtn.classList.add('runaway');
-            const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-            const maxY = window.innerHeight - noBtn.offsetHeight - 20;
-            const newX = Math.max(10, Math.random() * maxX);
-            const newY = Math.max(10, Math.random() * maxY);
-            noBtn.style.left = newX + 'px';
-            noBtn.style.top = newY + 'px';
 
             const msg = noMessages[noCount - 1];
             noCounter.textContent = msg;
